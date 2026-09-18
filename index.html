@@ -4,27 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>我的个人博客</title>
+  <title>首页 · Yuan 的个人博客</title>
+  <meta name="description" content="Yuan 的个人技术博客，记录计算机学习过程、技术文章和项目实践。">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <header>
+  <header class="site-header">
     <h1>我的个人博客</h1>
-
-    <nav>
-      <a href="index.html">首页</a>
-      <a href="about.html">关于我</a>
+    <nav aria-label="主导航">
+      <a href="index.html" aria-current="page">首页</a>
+      <a href="index.html#articles">文章</a>
+      <a href="projects.html">项目</a>
+      <a href="about.html">关于</a>
     </nav>
+    <button type="button" class="theme-toggle" aria-pressed="false" hidden>深色模式</button>
   </header>
 
   <main>
 
-    <h2>文章</h2>
+    <section class="intro" aria-labelledby="intro-title">
+      <p class="eyebrow">学习 · 记录 · 实践</p>
+      <h2 id="intro-title">你好，我是 Yuan。</h2>
+      <p>我是一名计算机科学专业的学生，在这里记录学习中的思考与实践。</p>
+      <a href="about.html">了解更多 →</a>
+    </section>
 
-    <article>
+    <section id="articles" aria-labelledby="articles-title">
+      <h2 id="articles-title">最近文章</h2>
+
+    <article class="card">
+      <p class="meta"><time datetime="2026-09-17">2026-09-17</time> · 学习记录</p>
       <h3>
         <a href="posts/first-post.html">
           我的第一篇博客
@@ -33,8 +45,24 @@
 
       <p>记录我的计算机学习过程。</p>
     </article>
+    </section>
+
+    <section aria-labelledby="projects-title">
+      <h2 id="projects-title">项目</h2>
+    <article class="card">
+      <span class="tag">示例占位</span>
+      <h3>示例项目：学习笔记网页</h3>
+      <p>这里将展示一个整理学习笔记的小项目，内容待补充。</p>
+      <p class="meta">技术栈（示例）：HTML / CSS / JavaScript</p>
+      <!-- 有真实仓库后，将下面的占位文字替换为 GitHub 链接。 -->
+      <span class="placeholder">GitHub：待添加</span>
+    </article>
+      <p><a href="projects.html">查看全部项目 →</a></p>
+    </section>
 
   </main>
+
+  <footer class="site-footer">© 2026 Yuan · Built with HTML, CSS and JavaScript</footer>
 
   <script src="js/main.js"></script>
 
